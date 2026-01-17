@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous Contacter - BudgetPulse</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        .app-icon svg {
+            width: 48px;
+            height: 48px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 svg {
+            width: 24px;
+            height: 24px;
+            fill: #007AFF;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #444;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+            border-radius: 12px;
+            margin: 16px 0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: white;
+        }
+
+        .contact-details h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .contact-details a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-details p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .response-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        .response-time svg {
+            width: 16px;
+            height: 16px;
+            fill: #1565c0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(0, 122, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 16px;
+        }
+
+        .app-store-badge img {
+            height: 44px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/>
+                </svg>
+            </div>
+            <h1>BudgetPulse</h1>
+            <p class="subtitle">Nous Contacter</p>
+        </header>
+
+        <div class="card">
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                Entrer en Contact
+            </h2>
+            <p>Nous serions ravis d'avoir de vos nouvelles ! Que vous ayez des questions, des commentaires ou des suggestions, nous sommes là pour vous aider à mieux gérer vos finances.</p>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </div>
+                <div class="contact-details">
+                    <h3>Support par Email</h3>
+                    <a href="mailto:badue043@gmail.com">badue043@gmail.com</a>
+                    <p>Pour les demandes générales, les demandes d'assistance et les commentaires</p>
+                    <div class="response-time">
+                        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        Réponse habituelle sous 24-48 heures
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg>
+                Questions Fréquentes
+            </h2>
+
+            <div class="faq-item">
+                <h3>Mes données financières sont-elles privées ?</h3>
+                <p>Oui ! Toutes vos données sont stockées localement sur votre appareil. Nous ne collectons, n'accédons ni ne transmettons jamais vos informations financières vers des serveurs. Votre budget reste totalement privé.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Comment restaurer mon achat premium ?</h3>
+                <p>Ouvrez BudgetPulse, allez dans Paramètres, appuyez sur « Passer à Pro », et recherchez l'option « Restaurer les achats ». Assurez-vous d'être connecté avec le même identifiant Apple utilisé pour l'achat initial.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Puis-je exporter mes données de budget ?</h3>
+                <p>Oui ! Allez dans Paramètres > Exporter les données pour sauvegarder vos transactions, catégories et historique de budget. C'est utile pour sauvegarder vos données ou les analyser dans un tableur.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Comment fonctionnent les notifications de budget ?</h3>
+                <p>BudgetPulse envoie des notifications locales (générées sur votre appareil, pas depuis un serveur) pour les avertissements de limite de budget, les rappels de dépenses et les célébrations d'objectifs. Vous pouvez les personnaliser ou les désactiver dans les Paramètres.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>J'ai trouvé un bug. Comment le signaler ?</h3>
+                <p>Veuillez nous envoyer un email à <a href="mailto:badue043@gmail.com" style="color: #007AFF;">badue043@gmail.com</a> avec une description du problème, le modèle de votre appareil et la version iOS. Les captures d'écran sont très utiles !</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                Soutenir BudgetPulse
+            </h2>
+            <p>Si BudgetPulse vous a aidé à prendre le contrôle de vos finances, voici quelques façons de nous soutenir :</p>
+            <ul style="padding-left: 24px; margin-top: 12px;">
+                <li style="margin-bottom: 8px; color: #444;"><strong>Laisser un Avis :</strong> Évaluez-nous sur l'App Store pour aider les autres à découvrir BudgetPulse</li>
+                <li style="margin-bottom: 8px; color: #444;"><strong>Partager avec des Amis :</strong> Parlez-en à quelqu'un qui pourrait bénéficier d'une meilleure gestion de budget</li>
+                <li style="margin-bottom: 8px; color: #444;"><strong>Passer Premium :</strong> Débloquez toutes les fonctionnalités et soutenez le développement continu</li>
+            </ul>
+
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="https://apps.apple.com/app/budgetpulse/id6740032876" target="_blank" class="app-store-badge">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Télécharger sur l'App Store">
+                </a>
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center; background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
+            <h2 style="justify-content: center;">
+                <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                Merci
+            </h2>
+            <p style="font-size: 1.1rem; color: #1565c0;">Merci d'avoir choisi BudgetPulse comme compagnon de vos finances personnelles. Chaque décision financière intelligente commence par la prise de conscience, et nous sommes honorés de faire partie de votre parcours vers la liberté financière.</p>
+            <p style="margin: 0; font-weight: 600; color: #0d47a1;">Vos objectifs financiers sont à portée de main !</p>
+        </div>
+
+        <nav class="nav-links">
+            <a href="privacy-fr.html">Politique de Confidentialité</a>
+            <a href="contact-fr.html">Nous Contacter</a>
+            <a href="index.html">English</a>
+            <a href="contact-es.html">Español</a>
+            <a href="contact-pt.html">Português</a>
+        </nav>
+
+        <footer>
+            <p>&copy; 2026 BudgetPulse. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
