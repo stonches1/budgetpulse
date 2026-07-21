@@ -188,7 +188,8 @@
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 24px;
+            align-items: center;
+            gap: 8px 12px;
             margin-top: 40px;
             flex-wrap: wrap;
         }
@@ -204,6 +205,22 @@
 
         .nav-links a:hover {
             background: rgba(0, 122, 255, 0.1);
+        }
+
+        .nav-links a.nav-primary {
+            flex-basis: auto;
+        }
+
+        .nav-links .nav-lang {
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            color: #5a6b7d;
+        }
+
+        .nav-links .nav-lang:hover {
+            background: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
         }
 
         footer {
@@ -333,16 +350,20 @@
         </div>
 
         <nav class="nav-links">
-            <a href="privacy-it.html">Informativa sulla Privacy</a>
-            <a href="contact-it.html">Contattaci</a>
-            <a href="contact.html">English</a>
-            <a href="contact-fr.html">Français</a>
-            <a href="contact-es.html">Español</a>
-            <a href="contact-pt.html">Português</a>
-            <a href="contact-de.html">Deutsch</a>
-            <a href="contact-ja.html">日本語</a>
-            <a href="contact-ko.html">한국어</a>
-            <a href="contact-nl.html">Nederlands</a>
+            <a class="nav-primary" href="privacy-it.html">Informativa sulla Privacy</a>
+            <a class="nav-primary" href="contact-it.html">Contattaci</a>
+            <a class="nav-lang" href="contact.html">English</a>
+            <a class="nav-lang" href="contact-fr.html">Français</a>
+            <a class="nav-lang" href="contact-es.html">Español</a>
+            <a class="nav-lang" href="contact-pt.html">Português (BR)</a>
+            <a class="nav-lang" href="contact-pt-pt.html">Português (PT)</a>
+            <a class="nav-lang" href="contact-de.html">Deutsch</a>
+            <a class="nav-lang" href="contact-nl.html">Nederlands</a>
+            <a class="nav-lang" href="contact-pl.html">Polski</a>
+            <a class="nav-lang" href="contact-tr.html">Türkçe</a>
+            <a class="nav-lang" href="contact-ar.html">العربية</a>
+            <a class="nav-lang" href="contact-ja.html">日本語</a>
+            <a class="nav-lang" href="contact-ko.html">한국어</a>
         </nav>
 
         <footer>

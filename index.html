@@ -116,7 +116,8 @@
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 24px;
+            align-items: center;
+            gap: 8px 12px;
             margin-top: 40px;
             flex-wrap: wrap;
         }
@@ -132,6 +133,22 @@
 
         .nav-links a:hover {
             background: rgba(0, 122, 255, 0.1);
+        }
+
+        .nav-links a.nav-primary {
+            flex-basis: auto;
+        }
+
+        .nav-links .nav-lang {
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            color: #5a6b7d;
+        }
+
+        .nav-links .nav-lang:hover {
+            background: rgba(0, 122, 255, 0.1);
+            color: #007AFF;
         }
 
         footer {
@@ -303,16 +320,20 @@
         </div>
 
         <nav class="nav-links">
-            <a href="index.html">Privacy Policy</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy-fr.html">Français</a>
-            <a href="privacy-es.html">Español</a>
-            <a href="privacy-pt.html">Português</a>
-            <a href="privacy-de.html">Deutsch</a>
-            <a href="privacy-it.html">Italiano</a>
-            <a href="privacy-ja.html">日本語</a>
-            <a href="privacy-ko.html">한국어</a>
-            <a href="privacy-nl.html">Nederlands</a>
+            <a class="nav-primary" href="index.html">Privacy Policy</a>
+            <a class="nav-primary" href="contact.html">Contact Us</a>
+            <a class="nav-lang" href="privacy-fr.html">Français</a>
+            <a class="nav-lang" href="privacy-es.html">Español</a>
+            <a class="nav-lang" href="privacy-pt.html">Português (BR)</a>
+            <a class="nav-lang" href="privacy-pt-pt.html">Português (PT)</a>
+            <a class="nav-lang" href="privacy-de.html">Deutsch</a>
+            <a class="nav-lang" href="privacy-it.html">Italiano</a>
+            <a class="nav-lang" href="privacy-nl.html">Nederlands</a>
+            <a class="nav-lang" href="privacy-pl.html">Polski</a>
+            <a class="nav-lang" href="privacy-tr.html">Türkçe</a>
+            <a class="nav-lang" href="privacy-ar.html">العربية</a>
+            <a class="nav-lang" href="privacy-ja.html">日本語</a>
+            <a class="nav-lang" href="privacy-ko.html">한국어</a>
         </nav>
 
         <footer>
